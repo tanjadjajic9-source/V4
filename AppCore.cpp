@@ -1,3 +1,9 @@
+// The C file functions used below (fopen and friends) are fine to use here: every result is checked. Microsoft's compiler flags
+// them as "unsafe" and, in an Xbox app, treats that as an error, so the warning is switched off before any header is read.
+#ifndef _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS 1
+#endif
+
 #include "AppCore.h"
 
 #include <algorithm>
